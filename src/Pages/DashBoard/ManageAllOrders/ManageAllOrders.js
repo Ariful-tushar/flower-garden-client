@@ -43,7 +43,7 @@ const ManageAllOrders = () => {
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/orders`)
+    fetch(`https://salty-refuge-81645.herokuapp.com/orders`)
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, [orders]);
@@ -55,7 +55,7 @@ const ManageAllOrders = () => {
     if (!getConfirmation) {
       return;
     }
-    fetch(`http://localhost:5000/orders/${id}`, {
+    fetch(`https://salty-refuge-81645.herokuapp.com/orders/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
@@ -75,7 +75,7 @@ const ManageAllOrders = () => {
     }
     setStatus(event.target.value);
     const newStatusData = { status: event.target.value };
-    fetch(`http://localhost:5000/orders/${id}`, {
+    fetch(`https://salty-refuge-81645.herokuapp.com/orders/${id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

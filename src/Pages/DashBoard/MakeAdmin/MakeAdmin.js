@@ -17,7 +17,7 @@ const MakeAdmin = () => {
   const [error, setError] = useState(false);
 
   const onSubmit = (data) => {
-    fetch("http://localhost:5000/users/makeadmin", {
+    fetch("https://salty-refuge-81645.herokuapp.com/users/makeadmin", {
       method: "PUT",
       headers: {
         "content-type": "application/json",

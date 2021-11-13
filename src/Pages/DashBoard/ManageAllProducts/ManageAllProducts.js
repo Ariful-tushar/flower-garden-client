@@ -36,7 +36,7 @@ const ManageAllProducts = () => {
   const [products, setOrders] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/flowers`)
+    fetch(`https://salty-refuge-81645.herokuapp.com/flowers`)
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, [products]);
@@ -48,7 +48,7 @@ const ManageAllProducts = () => {
     if (!getConfirmation) {
       return;
     }
-    fetch(`http://localhost:5000/flowers/${id}`, {
+    fetch(`https://salty-refuge-81645.herokuapp.com/flowers/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())

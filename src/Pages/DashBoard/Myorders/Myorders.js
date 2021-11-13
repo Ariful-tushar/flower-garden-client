@@ -36,7 +36,7 @@ const Myorders = () => {
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/orders?email=${user.email}`)
+    fetch(`https://salty-refuge-81645.herokuapp.com/orders?email=${user.email}`)
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, [orders]);
@@ -48,7 +48,7 @@ const Myorders = () => {
     if (!getConfirmation) {
       return;
     }
-    fetch(`http://localhost:5000/orders/${id}`, {
+    fetch(`https://salty-refuge-81645.herokuapp.com/orders/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())

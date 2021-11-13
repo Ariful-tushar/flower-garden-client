@@ -16,7 +16,7 @@ const AddProduct = () => {
     if (!getConfirmation) {
       return;
     }
-    fetch("http://localhost:5000/flowers", {
+    fetch("https://salty-refuge-81645.herokuapp.com/flowers", {
       method: "POST",
       headers: {
         "content-type": "application/json",

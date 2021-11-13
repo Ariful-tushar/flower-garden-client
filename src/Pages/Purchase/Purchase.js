@@ -24,7 +24,7 @@ const Purchase = () => {
   const { register, handleSubmit, reset } = useForm();
 
   useEffect(() => {
-    fetch(`http://localhost:5000/flowers/${flowerId}`)
+    fetch(`https://salty-refuge-81645.herokuapp.com/flowers/${flowerId}`)
       .then((res) => res.json())
       .then((data) => setFlower(data));
   }, []);
@@ -33,7 +33,7 @@ const Purchase = () => {
     let orderData = { ...data, productDetails: flower, status: "Pending" };
 
     console.log(orderData);
-    fetch("http://localhost:5000/orders", {
+    fetch("https://salty-refuge-81645.herokuapp.com/orders", {
       method: "POST",
       headers: {
         "content-type": "application/json",

@@ -21,6 +21,10 @@ const Login = () => {
     reset(data);
   };
 
+  const handleLogin = () => {
+    history.push("/login");
+  };
+
   return (
     <>
       <Navigation></Navigation>
@@ -73,6 +77,10 @@ const Login = () => {
 
           <Button variant="contained" type="submit">
             Submit
+          </Button>
+          <br />
+          <Button sx={{ my: 2 }} onClick={handleLogin} variant="contained">
+            Already Registered? Login here
           </Button>
         </form>
       </Container>

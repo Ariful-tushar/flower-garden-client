@@ -20,7 +20,7 @@ const GiveReview = () => {
     const reviewData = { ...data, rating, image };
     console.log(reviewData);
 
-    fetch("http://localhost:5000/reviews", {
+    fetch("https://salty-refuge-81645.herokuapp.com/reviews", {
       method: "POST",
       headers: {
         "content-type": "application/json",

@@ -16,6 +16,10 @@ const Login = () => {
   const onSubmit = (data) => {
     loginUserWithEmail(data.email, data.password, location, history);
   };
+
+  const handleNewUser = () => {
+    history.push("/register");
+  };
   return (
     <div>
       <Navigation></Navigation>
@@ -48,6 +52,10 @@ const Login = () => {
 
           <Button variant="contained" type="submit">
             Submit
+          </Button>
+          <br />
+          <Button sx={{ my: 2 }} onClick={handleNewUser} variant="contained">
+            New User? Register here
           </Button>
         </form>
       </Container>

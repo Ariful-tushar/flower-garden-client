@@ -9,7 +9,7 @@ const Explore = () => {
   const [flowers, setFlowers] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/flowers")
+    fetch("https://salty-refuge-81645.herokuapp.com/flowers")
       .then((res) => res.json())
       .then((data) => {
         // const newData = data.slice(0, 6);
