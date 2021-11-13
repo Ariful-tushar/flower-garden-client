@@ -3,8 +3,14 @@ import { Box } from "@mui/system";
 import React from "react";
 import Typography from "@mui/material/Typography";
 import "./Baner.css";
+import { useHistory } from "react-router";
 
 const Baner = () => {
+  const histpry = useHistory();
+  const handleExplore = () => {
+    histpry.push("/explore");
+  };
+
   return (
     <Box className="fg-baner-background">
       <Box sx={{ mx: 10, py: 35, px: 20, width: "25%", heigh: 100 }}>
@@ -16,6 +22,7 @@ const Baner = () => {
           The best gifts for those you love. Fresh flower delivery
         </Typography>
         <Button
+          onClick={handleExplore}
           sx={{ my: 2 }}
           className="fg-baner-button"
           variant="contained"

@@ -10,8 +10,11 @@ const Products = () => {
   useEffect(() => {
     fetch("http://localhost:5000/flowers")
       .then((res) => res.json())
-      .then((data) => setFlowers(data));
-  }, []);
+      .then((data) => {
+        const newData = data.slice(0, 6);
+        setFlowers(newData);
+      });
+  }, [flowers]);
 
   return (
     <Container>

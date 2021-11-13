@@ -33,6 +33,9 @@ import Payment from "../Payment/Payment";
 import GiveReview from "../GiveReview/GiveReview";
 import MakeAdmin from "../MakeAdmin/MakeAdmin";
 import AdminRoute from "../../Login/AdminRoute/AdminRoute";
+import ManageAllOrders from "../ManageAllOrders/ManageAllOrders";
+import ManageAllProducts from "../ManageAllProducts/ManageAllProducts";
+import AddProduct from "../AddProduct/AddProduct";
 
 const drawerWidth = 240;
 
@@ -69,7 +72,7 @@ function DashBoard(props) {
             </ListItem>
           </Link>
 
-          <Link className="fg-icons" to={`${url}/allproducts`}>
+          <Link className="fg-icons" to={`${url}/manageproducts`}>
             <ListItem button key="Manage All Products">
               <ListItemIcon>
                 <CollectionsIcon />
@@ -242,7 +245,13 @@ function DashBoard(props) {
             <MakeAdmin></MakeAdmin>
           </AdminRoute>
           <AdminRoute exact path={`${path}/addproduct`}>
-            <MakeAdmin></MakeAdmin>
+            <AddProduct></AddProduct>
+          </AdminRoute>
+          <AdminRoute exact path={`${path}/manageorders`}>
+            <ManageAllOrders></ManageAllOrders>
+          </AdminRoute>
+          <AdminRoute exact path={`${path}/manageproducts`}>
+            <ManageAllProducts></ManageAllProducts>
           </AdminRoute>
         </Switch>
       </Box>

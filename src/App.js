@@ -9,6 +9,7 @@ import Purchase from "./Pages/Purchase/Purchase";
 import DashBoard from "./Pages/DashBoard/DashBoard/DashBoard";
 import Payment from "./Pages/DashBoard/Payment/Payment";
 import Myorders from "./Pages/DashBoard/Myorders/Myorders";
+import Explore from "./Pages/Explore/Explore";
 
 function App() {
   return (
@@ -21,6 +22,9 @@ function App() {
             </Route>
             <Route path="/home">
               <Home></Home>
+            </Route>
+            <Route path="/explore">
+              <Explore></Explore>
             </Route>
             <Route path="/login">
               <Login></Login>

@@ -34,8 +34,21 @@ const Navigation = () => {
             >
               <MenuIcon />
             </IconButton>
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-              News
+            <Typography
+              onClick={() => history.push("/home")}
+              variant="h6"
+              component="div"
+              sx={{ cursor: "pointer" }}
+            >
+              Home
+            </Typography>
+            <Typography
+              onClick={() => history.push("/home")}
+              variant="h6"
+              component="div"
+              sx={{ flexGrow: 1, cursor: "pointer" }}
+            >
+              Flower Garden
             </Typography>
             {user?.email ? (
               <div>

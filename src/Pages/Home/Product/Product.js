@@ -18,8 +18,10 @@ const Product = ({ flower }) => {
   };
   return (
     <Grid item xs={4} sm={4} md={4} lg={4} align="center">
-      <Card sx={{ maxWidth: 350 }}>
-        <Box className="fg-background">
+      <Card
+        sx={{ maxWidth: 350, minHeight: "40em", backgroundColor: "#fafafa" }}
+      >
+        <Box>
           <CardMedia
             sx={{ width: "12em", mx: "auto", p: 2 }}
             component="img"
