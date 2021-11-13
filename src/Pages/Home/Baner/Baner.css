@@ -1,0 +1,13 @@
+.fg-baner-button {
+  float: left;
+}
+
+.fg-baner-background {
+  background-image: url("https://cdn.shopify.com/s/files/1/0439/7521/3208/files/slider-bg3_2000x.jpg?v=1595908489");
+  background-repeat: no-repeat;
+  height: 95vh;
+  background-size: 100% 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}

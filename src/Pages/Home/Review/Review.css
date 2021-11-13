@@ -1,0 +1,11 @@
+.fg-review-bg {
+  background-image: url("https://cdn.shopify.com/s/files/1/0439/7521/3208/files/flower-3_380x.png?v=1595841955");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 20em;
+}
+
+.fg-reviewer-image {
+  width: 20%;
+  border-radius: 50%;
+}
